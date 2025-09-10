@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tetris Classic</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>TETRIS</h1>
+  <div class="panels-row">
+    <div class="side-panel">
+      <div class="panel-title">NEXT</div>
+      <canvas id="next-piece" width="80" height="80"></canvas>
+    </div>
+    <div>
+      <canvas id="tetris" width="240" height="400"></canvas>
+    </div>
+    <div class="side-panel">
+      <div class="panel-title">HOLD</div>
+      <canvas id="hold-piece" width="80" height="80"></canvas>
+    </div>
+  </div>
+  <div class="score-panel">
+    <span>Score: </span><span id="score">0</span>
+    <span style="margin-left:2em;">High: </span><span id="high-score">0</span>
+  </div>
+  <div class="controls-row">
+    <button id="start-btn">Start Game</button>
+    <button id="pause-btn">Pause</button>
+    <button id="rotate-btn" type="button">Rotate</button>
+    <button id="settings-btn">Settings</button>
+    <button id="help-btn">Help</button>
+    <button id="leaderboard-btn">Leaderboard</button>
+    <div class="touch-controls">
+      <button id="btn-left" aria-label="Move Left">&#8592;</button>
+      <button id="btn-right" aria-label="Move Right">&#8594;</button>
+      <button id="btn-down" aria-label="Soft Drop">&#8595;</button>
+      <button id="btn-hard" aria-label="Hard Drop">&#11015;</button>
+      <button id="btn-rotate" aria-label="Rotate">&#8635;</button>
+      <button id="btn-hold" aria-label="Hold">H</button>
+      <button id="btn-pause" aria-label="Pause">&#10073;&#10073;</button>
+    </div>
+  </div>
+  <div id="game-over" style="display:none;">GAME OVER</div>
+  <div id="settings-modal" class="modal hidden"></div>
+  <div id="help-modal" class="modal hidden"></div>
+  <div id="leaderboard-modal" class="modal hidden"></div>
+  <script src="tetris.js"></script>
+</body>
+</html>
